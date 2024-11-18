@@ -1,0 +1,36 @@
+Config.scene_name = "scene_hallway"
+Config.model = "tramnerf"
+Config.seed = 40
+Config.scale = 0.4175892397793789
+Config.center = [ 4.11594725,  0.23289817, 13.48488906]
+Config.farplane = 23.694699519037624
+Config.nearplane = 0.1
+Config.test_image_id = 3
+Config.iterations = 240000
+Config.use_gradient_clipping = True
+Config.lr = 0.001
+Config.bsz = 4096
+
+TraMNeRF.mirrors = [
+    {
+        "type": "triangle",
+        "points": [[-1.06470758, 0.59441071,-2.24855939], [-0.57951323,-0.7311184 ,-1.2494276 ], [ 4.16656769, 0.00466164,-2.55578658]]
+    },
+    {
+        "type": "triangle",
+        "points": [[ 4.16656769, 0.00466164,-2.55578658], [ 3.69775824, 1.33666889,-3.56068037], [-1.06470758, 0.59441071,-2.24855939]]
+    }
+]
+
+TraMNeRF.materials = [
+    {
+        "type": "opaque_mirror"
+    }
+]
+
+TraMNeRF.mirror_scale = 0.4175892397793789
+TraMNeRF.mirror_center = [ 4.11594725,  0.23289817, 13.48488906]
+
+TraMNeRFMLP.netwidth = 1024
+
+TraMNeRF.num_bounces = 1

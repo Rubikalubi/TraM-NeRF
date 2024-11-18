@@ -1,0 +1,25 @@
+Config.scene_name = "scene_cylinder_synth"
+Config.model = "tramnerf"
+Config.seed = 40
+Config.farplane = 6.0
+Config.nearplane = 0.1
+Config.test_image_id = 4
+Config.iterations = 120000
+
+TraMNeRF.mirrors = [
+    {
+        "type": "cylinder",
+        "origin": [0.006725, -0.230915, 0.62847],
+        "end": [0.006725, 0.127085, 0.62847],
+        "radius": 0.179
+    },
+
+]
+
+TraMNeRF.materials = [
+    {
+        "type": "opaque_mirror"
+    }
+]
+
+TraMNeRF.num_bounces = 1

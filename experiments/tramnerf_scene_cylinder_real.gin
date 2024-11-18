@@ -1,0 +1,35 @@
+Config.scene_name = "scene_cylinder_real"
+Config.model = "tramnerf"
+Config.seed = 40
+Config.scale = 0.1238240912550476
+Config.center = [-0.36241034, 4.6307909 , 4.18152115]
+Config.farplane = 3.2
+Config.nearplane = 0.1
+Config.test_image_id = 3
+Config.iterations = 240000
+Config.use_gradient_clipping = True
+Config.white_background = False
+Config.lr = 0.001
+Config.bsz = 4096
+
+TraMNeRF.mirrors = [
+    {
+        "type": "cylinder",
+        "origin": [2.4824702739715576, -0.09723100066184998, -1.768542766571045],
+        "end": [1.2880635261535645, -0.04819805920124054, -0.7708773612976074],
+        "radius": 0.24376416206359863
+    }
+]
+
+TraMNeRF.materials = [
+    {
+        "type": "opaque_mirror"
+    }
+]
+
+TraMNeRF.mirror_scale = 0.1238240912550476
+TraMNeRF.mirror_center = [-0.36241034, 4.6307909 , 4.18152115]
+
+TraMNeRFMLP.netwidth = 1024
+
+TraMNeRF.num_bounces = 1

@@ -1,0 +1,23 @@
+Config.scene_name = "scene_trumpet_rough"
+Config.model = "tramnerf"
+Config.seed = 40
+Config.farplane = 6.0
+Config.nearplane = 0.1
+Config.test_image_id = 6
+Config.iterations = 120000
+
+TraMNeRFRough.mirrors = [
+    {
+        "type": "triangle",
+        "points": [[-0.11341, 0.1523, 0.33239], [-0.1134, -0.1452, 0.33239], [0.18419, -0.1452, 0.33239]]
+    },
+    {
+        "type": "triangle",
+        "points": [[0.18419, -0.1452, 0.33239], [0.1841, 0.1523, 0.33239], [-0.11341, 0.1523, 0.33239]]
+    }
+]
+
+Config.use_mc_model = True
+TraMNeRFRough.num_bounces = 1
+TraMNeRFRough.num_ray_samples = 2
+TraMNeRFRough.variance = 0.0025

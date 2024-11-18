@@ -1,0 +1,34 @@
+Config.scene_name = "scene_3"
+Config.model = "tramnerf"
+Config.seed = 40
+Config.farplane = 6.0
+Config.nearplane = 0.1
+Config.test_image_id = 5
+Config.iterations = 120000
+
+TraMNeRF.mirrors = [
+    {
+        "type": "triangle",
+        "points": [[-0.298863, 0.521367, 1.039],[-0.298863, 0.521367, 0.023521],[0.298863, 0.521367, 0.023521]]
+    },
+    {
+        "type": "triangle",
+        "points": [[0.298863, 0.521367, 0.023521],[0.298863, 0.521367, 1.039],[-0.298863, 0.521367, 1.039]]
+    },
+    {
+        "type": "triangle",
+        "points": [[0.544012, 0.29226, 1.039],[0.544012, 0.29226, 0.023521],[0.544012, -0.305466, 0.023521]]
+    },
+    {
+        "type": "triangle",
+        "points": [[0.544012, -0.305466, 0.023521],[0.544012, -0.305466, 1.039],[0.544012, 0.29226, 1.039]]
+    }
+]
+
+TraMNeRF.materials = [
+    {
+        "type": "opaque_mirror"
+    }
+]
+
+TraMNeRF.num_bounces = 2

@@ -1,0 +1,23 @@
+Config.scene_name = "scene_12"
+Config.model = "tramnerf"
+Config.seed = 40
+Config.farplane = 6.0
+Config.nearplane = 0.1
+Config.test_image_id = 6
+Config.iterations = 120000
+
+TraMNeRFRough.mirrors = [
+    {
+        "type": "triangle",
+        "points": [[-0.298863, 0.130243, 1.039], [-0.298863, 0.130243, 0.023521], [0.298863, 0.130243, 0.023521]]
+    },
+    {
+        "type": "triangle",
+        "points": [[0.298863, 0.130243, 0.023521], [0.298863, 0.130243, 1.039], [-0.298863, 0.130243, 1.039]]
+    }
+]
+
+Config.use_mc_model = True
+TraMNeRFRough.num_bounces = 1
+TraMNeRFRough.num_ray_samples = 2
+TraMNeRFRough.variance = 0.0625

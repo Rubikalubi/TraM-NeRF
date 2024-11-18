@@ -1,0 +1,43 @@
+Config.scene_name = "scene_library"
+Config.model = "tramnerf"
+Config.seed = 40
+Config.scale = 0.22309300274517002
+Config.center = [3.879702, 5.66587044, 2.6972564]
+Config.farplane =  11.326234832009824
+Config.nearplane = 0.1
+Config.test_image_id = 32
+Config.iterations = 240000
+Config.use_gradient_clipping = True
+Config.lr = 0.001
+Config.bsz = 4096
+
+TraMNeRF.mirrors = [
+    {
+        "type": "triangle",
+        "points": [[ 0.30402269,-0.41711576,-1.79794397], [ 0.73252119,-0.93758893,-1.2331923 ], [ 1.26357242,-0.77221673,-1.47807146]]
+    },
+    {
+        "type": "triangle",
+        "points": [[ 1.26357242,-0.77221673,-1.47807146], [ 0.83855716,-0.248     ,-2.04709582], [ 0.30402269,-0.41711576,-1.79794397]]
+    },
+    {
+        "type": "triangle",
+        "points": [[ 0.86049235, 1.91240245,-0.6343201 ], [ 0.50173018, 1.8706064 ,-1.12896554], [ 1.20720585, 1.80315176,-1.64466109]]
+    },
+    {
+        "type": "triangle",
+        "points": [[ 1.20720585, 1.80315176,-1.64466109], [ 1.56942626, 1.84600901,-1.14675188], [ 0.86049235, 1.91240245,-0.6343201 ]]
+    }
+]
+
+TraMNeRF.materials = [
+    {
+        "type": "opaque_mirror"
+    }
+]
+
+TraMNeRF.mirror_scale = 0.22309300274517002
+TraMNeRF.mirror_center = [3.879702, 5.66587044, 2.6972564]
+
+TraMNeRFMLP.netwidth = 1024
+TraMNeRF.num_bounces = 2
